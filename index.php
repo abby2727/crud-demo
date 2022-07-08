@@ -11,13 +11,29 @@
 </head>
 
 <body>
-    <form action="create.php" method="POST" class="form-inline m2">
-        <label for="">Name</label>
-        <input type="text" name="name" id="name" class="form-control m-2">
-        <label for="">Score</label>
-        <input type="number" name="score" id="score" class="form-control m-2">
-        <button type="submit" class="btn btn-primary">Add</button>
-    </form>
+    <div class="container mt-4">
+        <!-- READ -->
+        <table class="table">
+            <tbody>
+                <?php include('read.php'); ?>
+            </tbody>
+        </table>
+
+        <!-- CREATE -->
+        <form action="create.php" method="POST" class="form-inline">
+            <div class="row">
+                <div class="col">
+                    <label for="">Names</label>
+                    <input type="text" name="name" id="name" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <label for="">Score</label>
+                    <input type="number" name="score" id="score" class="form-control mb-2">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
 </body>
 
 </html>
