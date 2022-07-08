@@ -3,7 +3,7 @@
 
     $sql = "SELECT * FROM demo_table";
     $result = $conn->query($sql);
-    
+
     while ($row = $result->fetch_assoc()) {
         $id = isset($_GET['id']) ? $_GET['id'] : '';
         if ($row['id'] == $id) {
@@ -15,13 +15,15 @@
             echo '</form>';
         } else {
             echo "<tr>";
-            echo "<th scope='row'>" . $row['id'] . "</th>";
+            echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['name'] . "</td>";
             echo "<td>" . $row['score'] . "</td>";
             echo
                 '<td> 
                     <a class="btn btn-primary" href="index.php?id=' . $row['id'] . '" role="button">Update</a> 
+                    <a class="btn btn-danger" href="delete.php?id=' . $row['id'] . '" role="button">Delete</a> 
                 </td>';
+                
             echo "<tr>";
         }
     }
