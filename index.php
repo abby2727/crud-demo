@@ -18,9 +18,7 @@
 
                 <div class="card">
                     <div class="card-body p-5">
-                        <div class="text-center">
-                            <h3><a class="text-success text-decoration-none" href="#">To-Do List App</a></h3>
-                        </div>
+                        <h3>PHP-CRUD Demo</h3>
 
                         <!-- CREATE -->
                         <form action="create.php" method="POST" class="form-inline">
